@@ -11,20 +11,18 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var TheLabel: UILabel!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-var tapCount = 0
-
+    
+    @IBOutlet weak var Text1: UITextField!
+    
+    @IBOutlet weak var Text2: UITextField!
+   
     @IBAction func ButtonTap(sender: AnyObject) {
         
-        tapCount = tapCount + 1
+     TheLabel.text = "Answer: \(Double(Text1.text!)! + Double(Text2.text!)!)"
         
-        if tapCount >= 10 {
-            TheLabel.text = "Tapped 10 times"
         }
-    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
